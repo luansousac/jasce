@@ -8,7 +8,7 @@ var layouts    = require('express-ejs-layouts');
 
 /*-------------- Setting up the express listener ---------------*/
 
-var server = app.listen(port, '0.0.0.0', function() {
+var server = app.listen(port, function() {
     console.log('CTE running and listening on port 8080');
 })
 

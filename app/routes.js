@@ -44,7 +44,7 @@ router.get('/login', function(req, res) {
 /*--------------------- Connecting the app --------------------*/
 
 // Utilizando o método de conexão do RethinkDB
-rethink.connect({ host: process.env.IP, port: 28015 }, function(err, conn) {
+rethink.connect({ host: process.env.IP, port: process.env.PORT }, function(err, conn) {
     if(err) throw err;
     rethink.db('test').tableList().run(conn, function(err, response) {
         if(response.indexOf('edit') > -1) {
