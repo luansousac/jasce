@@ -1,0 +1,21 @@
+{
+  "name": "final-project",
+  "description": "Este diretório contém o trabalho final de Sistemas Distribuídos (2016.2)",
+  "main": "server.js",
+  "authors": [
+    "Luan Sousa Cordeiro"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "codemirror": "^5.25.2"
+  }
+}

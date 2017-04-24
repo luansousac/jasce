@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<!--
+    Identity by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Collaborative Code Editor</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/jpg" href="images/avatar1.jpg"/>
+        <!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    </head>
+    <body class="is-loading">
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Main -->
+                    <section id="main">
+                        <header>
+                            <span class="avatar"><img src="assets/css/images/overlay.png" /></span>
+                            <h1>Distributed Systems Final Project</h1>
+                            <p>A very simple collaborative text editor</p>
+                        </header>
+                        <%- defineContent('body') %>
+                    </section>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <ul class="copyright">
+                            <li>&copy; Luan Sousa</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                        <ul class="copyright">
+                            <li>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></li>
+                        </ul>
+                    </footer>
+
+            </div>
+
+        <!-- Scripts -->
+            <!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+            <script>
+                if ('addEventListener' in window) {
+                    window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+                    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+                }
+            </script>
+
+    </body>
+    <%- defineContent('fim') %>
+</html>

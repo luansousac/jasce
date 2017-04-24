@@ -1,0 +1,39 @@
+<%- contentFor('body') %>
+
+<ul class="actions index">
+	<li><a href="/login" class="button">Get Started</a></li>
+</ul>
+
+<hr />
+
+<footer>
+	<ul class="icons">
+		<li><a href="https://twitter.com/luansousac" class="fa-twitter">Twitter</a></li>
+		<li><a href="https://instagram.com/luansousac" class="fa-instagram">Instagram</a></li>
+		<li><a href="https://facebook.com/luansousac" class="fa-facebook">Facebook</a></li>
+	</ul>
+</footer>
+
+<script type="text/javascript">
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var room = getParameterByName('room');
+var user = getParameterByName('user');
+document.getElementById("username").innerHTML = user;
+
+$.ajax({
+    url: '/getData/' + room,
+    success: function(result, status, xhr) {
+        myCodeMirror.setValue(result.value);
+        console.log(result);
+    }
+});
+</script>
